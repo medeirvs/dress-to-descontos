@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress To - Descontos Exclusivos</title>
+    <!-- Importando Tailwind CSS para um design moderno e rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#fdf6f0', // Fundo suave/areia
+                            coral: '#e07a5f', // Tom terracota/coral característico
+                            dark: '#3d405b',  // Azul escuro elegante para textos
+                            accent: '#f4a261' // Laranja suave para destaque
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Ícones do FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-brand-light text-brand-dark font-sans antialiased">
+
+    <!-- Header / Nav -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <span class="text-2xl font-bold tracking-widest text-brand-dark">DRESS TO</span>
+            <a href="https://www.dressto.com.br" target="_blank" class="bg-brand-coral hover:bg-opacity-90 text-white px-5 py-2 rounded-full font-semibold text-sm transition duration-300 shadow-md">
+                Ir para a Loja
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="max-w-4xl mx-auto px-4 py-12 text-center">
+        <span class="bg-brand-accent/20 text-brand-coral font-bold text-xs uppercase px-3 py-1 rounded-full tracking-wider">
+            Desconto Exclusivo Ativo
+        </span>
+        
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-6 mb-4 text-brand-dark leading-tight">
+            Seu look Dress To com aquele <br class="hidden md:block"> <span class="text-brand-coral">desconto que a gente ama!</span>
+        </h1>
+        
+        <p class="text-lg text-gray-600 max-w-xl mx-auto mb-8">
+            Leve a leveza, as estampas e o DNA carioca da Dress To para o seu guarda-roupa. Use o código de vendedora e garanta benefícios exclusivos.
+        </p>
+
+        <!-- Box do Código de Vendedora -->
+        <div class="bg-white border-2 border-dashed border-brand-coral rounded-2xl p-6 max-w-md mx-auto shadow-sm mb-12">
+            <p class="text-xs uppercase tracking-wider text-gray-500 font-bold mb-2">Código de Vendedora</p>
+            <div class="flex items-center justify-between bg-brand-light p-4 rounded-xl border border-gray-100">
+                <span id="coupon-code" class="text-2xl font-black tracking-widest text-brand-coral">MX8M</span>
+                <button onclick="copyCode()" class="bg-brand-dark hover:bg-opacity-90 text-white px-4 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 transition">
+                    <i class="fa-regular fa-copy"></i> Copiar
+                </button>
+            </div>
+            <p class="text-xs text-gray-400 mt-3">*Use junto com seu cupom de desconto para acumular vantagens!</p>
+        </div>
+
+        <a href="https://www.dressto.com.br" target="_blank" class="inline-block bg-brand-coral hover:bg-opacity-90 text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition duration-300">
+            QUERO COMPRAR COM DESCONTO <i class="fa-solid fa-arrow-right ml-2"></i>
+        </a>
+    </main>
+
+    <!-- Como Funciona -->
+    <section class="bg-white py-16 border-t border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Como Garantir seu Desconto</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Passo 1 -->
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-brand-light text-brand-coral rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-bold text-lg mb-2">Escolha as Peças</h3>
+                    <p class="text-gray-500 text-sm">Navegue pelo site da Dress To e adicione seus favoritos ao carrinho.</p>
+                </div>
+                <!-- Passo 2 -->
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-brand-light text-brand-coral rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-bold text-lg mb-2">Insira o Código</h3>
+                    <p class="text-gray-500 text-sm">No carrinho, digite <span class="font-bold text-brand-coral">MX8M</span> no campo de Código de Vendedora.</p>
+                </div>
+                <!-- Passo 3 -->
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-brand-light text-brand-coral rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-bold text-lg mb-2">Acumule Vantagens</h3>
+                    <p class="text-gray-500 text-sm">Adicione seu cupom de desconto extra e finalize sua compra!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (Dúvidas Frequentes) -->
+    <section class="max-w-3xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-2">Ficou com alguma dúvida?</h2>
+        <p class="text-center text-gray-500 mb-10">Aqui vão algumas informações para te ajudar a economizar</p>
+
+        <div class="space-y-6">
+            <!-- Pergunta 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="font-bold text-lg text-brand-dark flex gap-2 items-center">
+                    <span class="text-brand-coral">1.</span> Como utilizar os cupons de desconto Dress To?
+                </h3>
+                <p class="text-gray-600 mt-2 pl-6">
+                    Após copiar o cupom, vá até o carrinho de compras no site da Dress To e cole o código no campo de cupom. Clique em “OK” e veja o desconto ser ativado.
+                </p>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="font-bold text-lg text-brand-dark flex gap-2 items-center">
+                    <span class="text-brand-coral">2.</span> Os cupons são cumulativos com outras promoções?
+                </h3>
+                <p class="text-gray-600 mt-2 pl-6">
+                    <strong>Nem sempre.</strong> A maioria dos descontos não são cumulativos com outras promoções, mas isso depende das regras de cada oferta. Sempre verifique os detalhes antes de finalizar o pedido.
+                </p>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="font-bold text-lg text-brand-dark flex gap-2 items-center">
+                    <span class="text-brand-coral">3.</span> Posso usar dois cupons juntos?
+                </h3>
+                <p class="text-gray-600 mt-2 pl-6">
+                    <strong>Sim!</strong> O código de vendedora <span class="font-bold text-brand-coral">MX8M</span> pode ser utilizado junto com o cupom de desconto, o que permite acumular benefícios em uma única compra.
+                </p>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="font-bold text-lg text-brand-dark flex gap-2 items-center">
+                    <span class="text-brand-coral">4.</span> O cupom é válido para todos os produtos?
+                </h3>
+                <p class="text-gray-600 mt-2 pl-6">
+                    A maioria dos cupons se aplica a produtos selecionados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white/70 text-center py-12 text-sm border-t border-gray-800">
+        <p class="mb-2">&copy; 2026 - Fanpage Dress To. Todos os direitos reservados.</p>
+        <p>Código de vendedora independente: <span class="text-brand-accent font-bold">MX8M</span></p>
+    </footer>
+
+    <!-- Script Simples para Copiar o Código de Vendedora -->
+    <script>
+        function copyCode() {
+            const code = document.getElementById('coupon-code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('Código de vendedora MX8M copiado com sucesso!');
+            }).catch(err => {
+                console.error('Erro ao copiar código: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
